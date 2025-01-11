@@ -1,1 +1,1 @@
-cout << linearSearch(vec,9) <<endl;
+5,4,-1,7,-8
