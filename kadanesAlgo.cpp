@@ -18,5 +18,7 @@ int main() {
     vector<int> nums = {3,-4,5,4,-1,7,-8};
     //int maxSum = INT_MIN;
     cout<< maxSubarray(nums) <<endl;
+printf("thank u");
     return 0;
+    
 }
