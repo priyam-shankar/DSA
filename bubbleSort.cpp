@@ -7,14 +7,20 @@
 using namespace std;
 void bubbleSort(int arr[], int n) {
     for(int i = 0; i<n-1; i++) {  // kitni baar sort krna hai ye decide krta hai 
+        bool isSwap = false;   //assume that no swapping is occured
         for(int j = 0; j<n-i-1; j++) {  // Ek pass me adjacent elements ko compare & swap karta hai.
-            if(arr[j] > arr[j+1]) {
+            if(arr[j] > arr[j+1]) {   // Swap if left element is greater
                 // swap(arr[j],arr[j+1]);
                 // swapping logic  
                 arr[j] = arr[j] + arr[j+1];
                 arr[j+1] = arr[j] - arr[j+1];
                 arr[j] = arr[j] - arr[j+1];
+                isSwap = true;
             }
+        }
+
+        if(!isSwap) {  // Agar isSwap false hi raha, mtlb array sorted hai
+            return;  // Directly function se bahar aa jao, aage check karne ki zaroorat nahi
         }
     }
 }
