@@ -1,0 +1,62 @@
+🔵 Bubble Sort – Quick Recap
+  1️⃣ Bubble Sort Ka Concept
+    👉 Adjacent elements ko compare karke swap karna hota hai agar left wala bada ho.
+    👉 Har pass ke baad ek sabse bada element last me fix ho jata hai.
+    👉 Total passes = (n-1) hote hain.
+
+  2️⃣ Dry Run Example (arr[] = {4, 1, 5, 2, 3})
+    Pass 1 (i = 0):
+    {4, 1, 5, 2, 3} → {1, 4, 5, 2, 3} → {1, 4, 2, 5, 3} → {1, 4, 2, 3, 5} ✅ (5 last me fix ho gaya!)
+
+    Pass 2 (i = 1):
+    {1, 4, 2, 3, 5} → {1, 2, 4, 3, 5} → {1, 2, 3, 4, 5} ✅ (4 fix ho gaya!)
+
+    Pass 3 (i = 2):
+    {1, 2, 3, 4, 5} → No swap! Already sorted! ✅
+
+    👉 Total comparisons per pass: n-i-1
+    👉 Total swaps: Only if needed!
+  3️⃣ Optimized Bubble Sort (isSwap ka use)
+    Agar koi swap nahi hota (isSwap = false), toh loop ko break kar dete hain → Best case me O(n) time lagta hai!
+
+    cpp code:
+    if (!isSwap) {  
+        return;  
+    }
+    🔥 Yeh optimization sorted arrays ke case me time bachata hai! ✅
+   4️⃣ Bubble Sort Ka Complexity
+                Case	                             Time Complexity
+        Best Case (Already Sorted)	            O(n) ✅ (isSwap optimization ke wajah se)
+        Worst Case (Reverse Sorted)	            O(n²) ❌
+        Average Case	                        O(n²) ❌
+
+        👉 Stable Sorting Algorithm (Duplicate elements ka order same rehta hai!)
+
+    5️⃣ Code Snippet (Quick Reference)
+
+         cpp code:
+         void bubbleSort(int arr[], int n) {
+            for(int i = 0; i < n-1; i++) {  
+                bool isSwap = false;   
+                for(int j = 0; j < n-i-1; j++) {  
+                    if(arr[j] > arr[j+1]) {  
+                        swap(arr[j], arr[j+1]);  
+                        isSwap = true;  
+                    }
+                }
+                if (!isSwap) return;  // Optimization
+            }
+        }     
+
+
+        ✅ i loop → Passes ke liye
+        ✅ j loop → Comparisons ke liye
+        ✅ isSwap → Unnecessary passes avoid karne ke liye
+
+
+    🔚 Conclusion (TL;DR)
+        ✔️ Bubble Sort ek simple comparison-based sorting algorithm hai.
+        ✔️ Har pass me ek sabse bada element last me shift hota hai.
+        ✔️ Agar array pehle se sorted ho, toh isSwap ki wajah se O(n) me kaam ho jata hai.
+        ✔️ Worst case me O(n²) time lagta hai, isliye bade arrays ke liye efficient nahi hai.
+
