@@ -1,0 +1,71 @@
+🔵 Selection Sort – Quick Recap 🚀🔥
+    1️⃣ Selection Sort Ka Concept
+    👉 Har pass me sabse chhota element dhundho aur usko uski sahi jagah fix karo.
+    👉 Total passes = (n-1) (kyunki last element apne aap sorted ho jayega).
+    👉 Swapping sirf ek baar hoti hai (pass ke end me).
+
+
+    2️⃣ Selection Sort – Dry Run Example
+    🛠 Initial Array: {4, 1, 5, 2, 3}
+
+    Pass 1 (i=0)
+    ✔ Smallest element 1 hai → {1, 4, 5, 2, 3} (Swap 4 ↔ 1)
+
+    Pass 2 (i=1)
+    ✔ Smallest element 2 hai → {1, 2, 5, 4, 3} (Swap 4 ↔ 2)
+
+    Pass 3 (i=2)
+    ✔ Smallest element 3 hai → {1, 2, 3, 4, 5} (Swap 5 ↔ 3)
+
+    Pass 4 (i=3)
+    ✔ Smallest element 4 hai → {1, 2, 3, 4, 5} (Already sorted, no swap)
+
+    ✔ Final Sorted Array: {1, 2, 3, 4, 5} ✅
+
+
+    4️⃣ Selection Sort Ka Breakdown (Tumhare Doubts Ke Saath)
+    ✅ Outer Loop (i)
+    i ke each pass me ek element fix hota hai
+
+    n-1 times chalta hai
+
+    Ensures: Array gradually sorted ho raha hai
+
+    ✅ Inner Loop (j)
+    i+1 se start hota hai, taaki i ke baad wale elements check karein
+
+    Sabse chhota element dhundhta hai
+
+    Agar j pe chhota element milta hai toh smallestIdx ko update karta hai
+
+    ✅ Swapping
+    Inner loop ke complete hone ke baad smallest element i ke saath swap hota hai
+
+    Sirf ek swap per pass (Unlike Bubble Sort)
+
+    5️⃣ Selection Sort Ka Complexity
+             Case	                                    Time Complexity
+        ✅ Best Case (Already Sorted)	                O(n²) ❌
+        ❌ Worst Case (Reverse Sorted)	                O(n²) ❌
+        📈 Average Case                                  O(n²) ❌
+        💾 Space Complexity                             O(1) (In-Place)
+
+        👉 Swaps kam hote hain, lekin comparisons zyada hote hain!
+
+
+
+    6️⃣ Selection Sort vs Bubble Sort
+
+        Feature	                             Selection Sort	                                     Bubble Sort
+        Swaps per Pass	                 1 Swap (End me)	                             Multiple Swaps (Adjacent Elements)
+        Comparisons	                             O(n²)	                                            O(n²)
+        Stable?	                        ❌ No (Swaps can change order)	                         ✅ Yes
+        Best for?	                  Small Arrays, Simple Implementation                 	When stability is needed    
+
+
+
+     7️⃣ Conclusion (TL;DR)
+        ✔️ Selection Sort ek simple sorting technique hai jo O(n²) me kaam karta hai.
+        ✔️ Each pass me ek smallest element dhundkar usko fix kiya jata hai.
+        ✔️ Best case me bhi O(n²) time lagta hai kyunki comparisons hamesha hote hain.
+        ✔️ Bubble Sort se kam swaps karta hai, but still inefficient for large arrays.   
