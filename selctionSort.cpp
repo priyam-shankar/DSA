@@ -11,7 +11,7 @@ void selectionSort(int arr[], int n) {
         swap(arr[i],arr[smallestIdx]);   // Smallest ko i wali position pe fix kar do
     }
 }
-void printArray(int arr[], int n) {   
+void printArray(int arr[], int n) {   // function for printing the array 
     for(int i = 0; i<n ; i++) {
         cout <<arr[i] <<" ";
     }
