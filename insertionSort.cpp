@@ -15,7 +15,7 @@ void insertionSort(int arr[], int n) {
     }
 }
 
-void printArray(int arr[], int n) {      
+void printArray(int arr[], int n) {      //print array elements
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
     cout << endl;
