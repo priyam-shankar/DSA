@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 vector<int> productExceptSelf(vector<int>& nums) {
     int n = nums.size();
     vector<int> ans(n, 1);
@@ -18,3 +22,6 @@ vector<int> productExceptSelf(vector<int>& nums) {
 
     return ans;
 }
+
+int main() {
+    vector<int> nums = {1, 2, 3, 4};
