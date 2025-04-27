@@ -11,6 +11,12 @@ void insertionSort(int arr[], int n) {
         arr[prev+1] = curr;
     }
 }
+void printArray(int arr[], int n ) {
+    for(int i = 0; i<n; i++) {
+        cout << arr[i] <<" ";
+    }
+    cout <<endl;
+}
 int main(){
     int n = 5;
     int arr[] = {4,1,5,2,3};
