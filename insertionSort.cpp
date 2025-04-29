@@ -4,14 +4,14 @@ using namespace std;
 void insertionSort(int arr[], int n) {
     for(int i=1; i<n; i++){
         int curr = arr[i];
-        int prev = i-1;
+        int prevIdx = i-1;
 
-        while(prev >= 0 && arr[prev] > curr) {
-            arr[prev+1] = arr[prev];
-            prev--;
+        while(prevIdx >= 0 && arr[prevIdx] > curr) {
+            arr[prevIdx+1] = arr[prevIdx];
+            prevIdx--; // prev = -1 ab pure ke liye 
         }
 
-        arr[prev+1] = curr;
+        arr[prevIdx+1] = curr; //yaani ki arr[-1+1] ; b/c prev = -1
     }
 }
 
