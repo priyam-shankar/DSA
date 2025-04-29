@@ -1,0 +1,65 @@
+🟢 Insertion Sort – Quick Recap
+  1️⃣ Insertion Sort Ka Concept
+    👉 Array ko do parts me socho: sorted (left) + unsorted (right)
+    👉 Har element ko uthao (current), aur usse pehle wale sorted part me sahi jagah pe insert karo
+    👉 Pehle wale elements ko right shift karte jao jab tak current se bade ho
+    👉 Jab chhoti jagah mil jaaye → insert it!
+        💡 Jaise cards ko haath me sort karte ho — waise hi!
+
+2️⃣ Dry Run Example
+  arr[] = {4, 1, 5, 2, 3}
+
+   i = 1 → curr = 1
+    prev = 0 → 4 > 1 → shift
+    arr = {4, 4, 5, 2, 3}
+    → insert 1 at arr[0]
+    arr = {1, 4, 5, 2, 3}
+
+   i = 2 → curr = 5
+    prev = 1 → 4 < 5 → no shift
+    ✅ already in place
+
+   i = 3 → curr = 2
+    prev = 2 → 5 > 2 → shift
+    prev = 1 → 4 > 2 → shift
+    prev = 0 → 1 < 2 → insert
+    arr = {1, 2, 4, 5, 3}
+
+   i = 4 → curr = 3
+    prev = 3 → 5 > 3 → shift
+    prev = 2 → 4 > 3 → shift
+    prev = 1 → 2 < 3 → insert
+    arr = {1, 2, 3, 4, 5} ✅
+
+3️⃣ Code Snippet (Quick Reference)
+   void insertionSort(int arr[], int n) {
+        for(int i = 1; i < n; i++) {
+            int curr = arr[i];
+            int prev = i - 1;
+
+            while(prev >= 0 && arr[prev] > curr) {
+                arr[prev + 1] = arr[prev];  // shift
+                prev--;
+            }
+            arr[prev + 1] = curr;  // insert
+        }
+    }
+  ✅ curr → jise insert karna hai
+  ✅ prev → sorted part me peeche jaane ke liye
+  ✅ while → jab tak chhoti jagah nahi milti, shift karte jao   
+
+4️⃣ Insertion Sort Ki Complexity
+       Case                                  Time Complexity
+ ✅ Best Case (Already Sorted)     =>            O(n)
+ ❌ Worst Case (Reverse)           =>            O(n²)
+ ❌ Average Case                   =>            O(n²)
+
+ 👉 Stable Sorting Algorithm ✔️
+ 👉 In-place sorting (no extra space)
+
+🔚 Conclusion (TL;DR):-
+
+   ✔️ Best for small or nearly sorted arrays
+   ✔️ Card sorting jaisa feel
+   ✔️ Best case me fast (O(n)), but worst case me slow (O(n²))
+   ✔️ Simple and useful in many internal sorting routines
