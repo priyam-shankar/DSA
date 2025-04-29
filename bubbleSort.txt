@@ -28,7 +28,7 @@
                 Case	                             Time Complexity
         Best Case (Already Sorted)	            O(n) ✅ (isSwap optimization ke wajah se)
         Worst Case (Reverse Sorted)	            O(n²) ❌
-        Average Case	                        O(n²) ❌
+        Average Case	                          O(n²) ❌
 
         👉 Stable Sorting Algorithm (Duplicate elements ka order same rehta hai!)
 
