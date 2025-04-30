@@ -2,7 +2,7 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
-void sortColors(vector<int>& nums){
+void sortColors(vector<int>& nums){             // TC : O(nlogn);    SC : O(1)
     sort(nums.begin(), nums.end());
 }
 int main() {
