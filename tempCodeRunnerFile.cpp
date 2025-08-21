@@ -1,1 +1,2 @@
-5,4,-1,7,-8
+cout << "Enter Your Decimal No: " ;
+    cin >> decNum;
